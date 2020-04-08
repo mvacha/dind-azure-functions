@@ -11,8 +11,8 @@ RUN apk update && apk add bash
 
 # Install Azure CLI
 RUN apk update && apk upgrade && apk add make py-pip
-RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python2-dev
-RUN pip install azure-cli && apk del --purge build
+RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev
+RUN pip3 install azure-cli && apk del --purge build
 
 # .NET Core dependencies
 RUN apk add --no-cache \
