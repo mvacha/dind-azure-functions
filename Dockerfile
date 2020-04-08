@@ -11,7 +11,7 @@ RUN apk update && apk add bash
 
 # Install Azure CLI
 RUN apk update && apk upgrade && apk add make py-pip
-RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev=3.7.5-r1
+RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev=3.8.2-r0
 RUN pip3 install azure-cli && apk del --purge build
 
 # .NET Core dependencies
