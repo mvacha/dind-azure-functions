@@ -8,3 +8,6 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     dpkg -i packages-microsoft-prod.deb && \
     apt update &&  \
     apt install azure-functions-core-tools-3 -y
+
+# Install zip
+RUN apt install zip -y
